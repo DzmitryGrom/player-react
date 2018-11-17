@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react'
+import './index.css'
 
-class StateCover extends Component {
+export class StateCover extends PureComponent {
     render(){
+        const { info, isOpenList } = this.props;
         return(
-            <div className="state state-cover">
+            <div className={isOpenList ? 'state state-cover state-cover-up' : 'state state-cover'}>
                 <div className="panel panel_top">
                     <span className="panel-side-title"><i className="i i_arrow"/><span className="panel-side-tittle-text">Now Playing</span></span>
                 </div>
                 <div className="track">
-                    {/*<div className="track-cover" style={{maxWidth: '70%', backgroundImage: `url(${imageUrl})`}}/>*/}
+                    <div className="track-cover" style={{maxWidth: '70%', backgroundImage: `url(${info})`}}/>
                     <div className="track-bar">
                         <a style={{width: '82%'}} className="track-bar-line" href="#"><span className="track-bar-value">2.50</span></a>
                     </div>

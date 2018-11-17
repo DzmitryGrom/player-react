@@ -1,0 +1,36 @@
+.state-playlist{
+    margin-top: -60px;
+    transform: translateY(100%);
+    position: absolute;
+    transition: transform .6s;
+}
+.state-playlist-active{
+    position: absolute;
+    transform: translateY(0%);
+    margin-top: 0px;
+    transition: transform .6s;
+}
+.panel_bg{
+    background-color:  rgba(29, 39, 44, 0.8);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.top-panel-text{
+    font-family: Roboto;
+    color:  rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+}
+.playlist{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+    overflow: hidden;
+  }

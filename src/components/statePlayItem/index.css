@@ -1,0 +1,41 @@
+.playlist-item{
+    border: 1px solid rgba(29, 39, 44, 0.5);
+    font-size: 0px;
+    padding: 10px 5% 19px 6%;
+}
+.playlist-item-select{
+    background-color:  rgba(29, 39, 44, 0.5);
+}
+.pl-side_left{
+    width: 81%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+.pl-side_right{
+    display: inline-block;
+    text-align: right;
+    width: 19%;
+    vertical-align: top;
+}
+.pl-text_top{
+    display: block;
+    font-family: Roboto;
+    color:  rgba(216, 217, 233, 0.9);
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0 auto 11px auto;
+    padding: 0px;
+    line-height: 1;
+  }
+
+.pl-text_botton{
+    font-family: Roboto;
+    color:  rgba(235, 235, 250, 0.8);
+    font-weight: 400;
+    font-size: 13.3px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+    line-height: 1;
+}
