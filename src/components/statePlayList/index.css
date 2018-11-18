@@ -31,6 +31,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 60px;
+    top: 58px;
     overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
