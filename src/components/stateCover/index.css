@@ -1,6 +1,6 @@
 
   .i_arrow{
-    background-image: url("../../interface/interface/arrow.png");
+    background-image: url("../../interface/arrow.png");
     width: 14px;
     height: 13px;
   }
@@ -9,12 +9,12 @@
   
   }
   .arrow-back{
-    background-image: url("../../interface/interface/arrow-back.png");
+    background-image: url("../../interface/arrow-back.png");
     width: 10px;
     height: 17px;
   }
   .i_arrow-eq{
-    background-image: url("../../interface/interface/arrow-eq.png");
+    background-image: url("../../interface/arrow-eq.png");
     width: 14px;
     height: 12px;
     float: right;
@@ -24,31 +24,31 @@
     margin: 4px 14px 0px 0px;
   }
   .i_settings{
-    background-image: url("../../interface/interface/ellipse.png");
+    background-image: url("../../interface/ellipse.png");
     background-repeat: no-repeat;
     width: 4px;
     height: 24px;
   }
   .i_search{
-    background-image: url("../../interface/interface/search.png");
+    background-image: url("../../interface/search.png");
     width: 20px;
     height: 21px;
   }
   .i_scale{
-    background-image: url("../../interface/interface/scale.png");
+    background-image: url("../../interface/scale.png");
     background-repeat: no-repeat;
     width: 19px;
     height: 22px;
   }
   .i_setting-red{
     vertical-align: middle;
-    background-image: url("../../interface/interface/ellipse-litle.png");
+    background-image: url("../../interface/ellipse-litle.png");
     background-repeat: no-repeat;
     width: 2px;
     height: 15px;
   }
   .i_sound{
-    background-image: url("../../interface/interface/sound.png");
+    background-image: url("../../interface/sound.png");
     width: 24px;
     height: 24px;
     position: absolute;
@@ -56,29 +56,29 @@
     margin-top: -12px;
   }
   .i_sound:hover{
-    background-image: url("../../interface/interface/sound-active.png");
+    background-image: url("../../interface/sound-active.png");
     width: 24px;
     height: 24px;
   }
   .i_shufle{
-    background-image: url("../../interface/interface/shuffle.png");
+    background-image: url("../../interface/shuffle.png");
     width: 23px;
     height: 20px;
   }
   .i_equalizer{
-    background-image: url("../../interface/interface/equalizer.png");
+    background-image: url("../../interface/equalizer.png");
     width: 23px;
     height: 21px;
   }
   .i_equalizer-switch{
-    background-image: url("../../interface/interface/switch.png");
+    background-image: url("../../interface/switch.png");
     width: 26px;
     height: 26px;
     position: absolute;
     bottom: 0
   }
   .i_power{
-    background-image: url("../../interface/interface/power.png");
+    background-image: url("../../interface/power.png");
     max-width: 100px;
     max-height: 100px;
     position: absolute;
@@ -88,34 +88,34 @@
     background-repeat: no-repeat;
   }
   .i_prev{
-    background-image: url("../../interface/interface/prev.png");
+    background-image: url("../../interface/prev.png");
     width: 27px;
     height: 14px;
   }
   .i_play{
-    background-image: url("../../interface/interface/play.png");
+    background-image: url("../../interface/play.png");
     width: 30px;
     height: 35px;
   }
   .i_next{
-    background-image: url("../../interface/interface/next.png");
+    background-image: url("../../interface/next.png");
     width: 27px;
     height: 14px;
   }
   .i_repeat{
-    background-image: url("../../interface/interface/repeat.png");
+    background-image: url("../../interface/repeat.png");
     width: 23px;
     height: 18px;
   }
   .i_reload{
-    background-image: url("../../interface/interface/reload.png");
+    background-image: url("../../interface/reload.png");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 30px;
     height: 24px;
   }
   .i_play-bottom{
-    background-image: url("../../interface/interface/play-bottom.png");
+    background-image: url("../../interface/play-bottom.png");
     width: 24px;
     height: 27px;
     background-size: 100%;
@@ -427,7 +427,7 @@
     background: none;
   }
   .panel-top-search-field{
-    background-image: url("../../interface/interface/search-form.png");
+    background-image: url("../../interface/search-form.png");
     display: block;
     background-size: 1px 100%;
     margin-right: 58px;
@@ -799,7 +799,9 @@
     display: block;
     margin: 0 auto;
     height: 320px;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   .track-bar{
     font-size: 0;
@@ -857,14 +859,6 @@
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
     background-size: 100%;
     background-repeat: no-repeat;
-  }
-  .bottom-panel_side-left-page{
-    background-image: url("../../interface/gerl.png");
-    width: 82px;
-    display: inline-block;
-    vertical-align: bottom;
-    height: 82px;
-    background-size: 100%;
   }
   .bottom-panel_top-panel{
     position: absolute;

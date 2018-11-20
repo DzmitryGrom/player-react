@@ -1,15 +1,25 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { StatePlayItem } from '../statePlayItem'
+import { connect } from 'react-redux';
 import './index.css'
 
-export class StatePlayList extends PureComponent {
+class StatePlayList extends Component {
     state = {
         selectTrackId: null
     };
 
+    handleClick = selectTrackId => {
+        //this.props.onSelectTrackId(selectTrackId);
+        if (this.state.selectTrackId !== selectTrackId) {
+            this.props.onSelectTrackId(selectTrackId)
+            this.setState({ selectTrackId: this.state.selectTrackId === selectTrackId ? null : selectTrackId });
+
+        }
+        return
+    };
+
     render() {
         const { onButtonClick, isOpenList, tracksItems } = this.props;
-        console.log(tracksItems);
         if (tracksItems) {
             const statePlayItem = tracksItems.map((tracksItem, index) =>
                 <li key={tracksItem.id} onClick={this.handleClick.bind(this, tracksItem.id)}>
@@ -33,12 +43,17 @@ export class StatePlayList extends PureComponent {
         return null
     }
 
-    handleClick = selectTrackId => {
-        if (this.state.selectTrackId !== selectTrackId) {
-            this.setState({ selectTrackId: this.state.selectTrackId === selectTrackId ? null : selectTrackId })
-        }
-        return
-    }
 }
 
-export default StatePlayList;
+
+export default connect(
+    state => ({
+        testStore: state
+    }),
+    dispatch => ({
+        onSelectTrackId: (trackId) => {
+            dispatch({ type: 'PLAY_TRACK_ID', payload: trackId })
+
+        }
+    })
+)(StatePlayList);
