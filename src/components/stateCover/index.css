@@ -128,6 +128,7 @@
     position: absolute;
   }
   .controller-btn{
+    cursor: pointer;
     display: inline-block;
     width: 20%;
   }
@@ -175,15 +176,6 @@
   .state-equalizer-active{
     transition: transform .6s;
     transform: translateX(0%);
-  }
-  .scroll{
-    right: 2px;
-    border-radius:500px;
-    height: 64px;
-    width: 5px;
-    background-color: #ff5252;
-    position: absolute;
-    z-index: 3;
   }
   .panel_top{
     font-size: 0;
@@ -793,7 +785,6 @@
   }
   .track{
     text-align: center;
-    margin-top: 32px;
   }
   .track-cover{
     display: block;
@@ -810,7 +801,7 @@
   }
   .track-bar-line{
     background-color: #ff5252;
-    height: 10px;
+    height: 2px;
     display: block;
     position: relative;
   }

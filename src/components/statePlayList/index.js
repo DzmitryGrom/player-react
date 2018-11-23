@@ -5,26 +5,21 @@ import './index.css'
 
 class StatePlayList extends Component {
     state = {
-        selectTrackId: null
+        selectTrack: false,
     };
-
     handleClick = selectTrackId => {
-        //this.props.onSelectTrackId(selectTrackId);
-        if (this.state.selectTrackId !== selectTrackId) {
-            this.props.onSelectTrackId(selectTrackId)
-            this.setState({ selectTrackId: this.state.selectTrackId === selectTrackId ? null : selectTrackId });
-
-        }
-        return
+        this.props.onSelectTrack(selectTrackId)
+        this.setState({ selectTrack: selectTrackId});
     };
-
-    render() {
-        const { onButtonClick, isOpenList, tracksItems } = this.props;
-        if (tracksItems) {
-            const statePlayItem = tracksItems.map((tracksItem, index) =>
+    render(){
+       
+        const { onButtonClick, isOpenList } = this.props;
+       
+        if (this.props.__Store.tracks.length > 0) {
+            const statePlayItem = this.props.__Store.tracks[0].map((tracksItem, index) =>
                 <li key={tracksItem.id} onClick={this.handleClick.bind(this, tracksItem.id)}>
                     <StatePlayItem
-                        isSelect={this.state.selectTrackId === tracksItem.id}
+                        isSelect={this.state.selectTrack === tracksItem.id}
                         trackItem={tracksItem}
                     />
                 </li>
@@ -42,18 +37,16 @@ class StatePlayList extends Component {
         }
         return null
     }
-
+   
 }
-
 
 export default connect(
     state => ({
-        testStore: state
+        __Store: state
     }),
     dispatch => ({
-        onSelectTrackId: (trackId) => {
+        onSelectTrack: (trackId) => {
             dispatch({ type: 'PLAY_TRACK_ID', payload: trackId })
-
         }
     })
 )(StatePlayList);

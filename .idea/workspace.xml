@@ -2,72 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ada90329-b858-48c4-beae-f45dbf28f4c0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/avenged.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/bad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/bodyslam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/breaking.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/carusel-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/carusel-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/carusel-top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/city.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/coast.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/cocktail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/cover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/dahlia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/dove.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/earth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/foo-fighters.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/foofightersbottom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/gerl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/hot-limit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/arrow-back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/arrow-eq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/ellipse-litle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/ellipse.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/equalizer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/next.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/play-bottom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/play.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/power.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/prev.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/reload.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/repeat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/scale.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/scroll.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/search-form.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/shuffle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/sound-active.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/sound.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/switch.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/interface/top-panel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/man_black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/muse.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/pp.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/pp2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/pp3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/pp4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/pp5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/pp6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/red-line.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/round.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/interface/roven.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/stateCover/index.css" afterPath="$PROJECT_DIR$/src/components/stateCover/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/stateCover/index.js" afterPath="$PROJECT_DIR$/src/components/stateCover/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/statePlayItem/index.css" afterPath="$PROJECT_DIR$/src/components/statePlayItem/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/statePlayItem/index.js" afterPath="$PROJECT_DIR$/src/components/statePlayItem/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/statePlayList/index.css" afterPath="$PROJECT_DIR$/src/components/statePlayList/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/statePlayList/index.js" afterPath="$PROJECT_DIR$/src/components/statePlayList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fixtures.js" afterPath="$PROJECT_DIR$/src/fixtures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -195,7 +130,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-24" />
     <option name="y" value="4" />
     <option name="width" value="1938" />
@@ -442,7 +377,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542380781799</updated>
-      <workItem from="1542380783200" duration="37969000" />
+      <workItem from="1542380783200" duration="38602000" />
     </task>
     <task id="LOCAL-00001" summary="add api">
       <created>1542641443031</created>
@@ -451,14 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542641443031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add redux and change folders">
+      <created>1542722265059</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542722265059</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37969000" />
+    <option name="totallyTimeSpent" value="38602000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15490717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -488,7 +430,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add api" />
-    <option name="LAST_COMMIT_MESSAGE" value="add api" />
+    <MESSAGE value="add redux and change folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redux and change folders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
