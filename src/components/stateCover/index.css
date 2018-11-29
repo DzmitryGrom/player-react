@@ -97,6 +97,12 @@
     width: 30px;
     height: 35px;
   }
+  .i_pause{
+    border-style: double;
+    border-width: 0 0 0 37px;
+    border-color: #fe5f58;
+    height: 35px;
+  }
   .i_next{
     background-image: url("../../interface/next.png");
     width: 27px;
@@ -785,6 +791,8 @@
   }
   .track{
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
   .track-cover{
     display: block;
@@ -793,6 +801,18 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+  .track-cover-author {
+    width: 88px;
+    height: 88px;
+    background-size: cover;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    margin: -90px 0 0 -44px;
+    background-repeat: no-repeat;
   }
   .track-bar{
     font-size: 0;
