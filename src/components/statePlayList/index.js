@@ -4,22 +4,23 @@ import { connect } from 'react-redux';
 import './index.css'
 
 class StatePlayList extends Component {
-    state = {
-        selectTrack: false,
-    };
     handleClick = selectTrackId => {
-        this.props.onSelectTrack(selectTrackId)
-        this.setState({ selectTrack: selectTrackId});
+        this.props.onSelectTrack(selectTrackId);
+        setTimeout(function() {
+            document.querySelector('audio').play();
+        }.bind(this),0)
     };
+
+    getPlayId = () => this.props.__Store.selectTrack[0];
+
     render(){
-       
         const { onButtonClick, isOpenList } = this.props;
        
         if (this.props.__Store.tracks.length > 0) {
             const statePlayItem = this.props.__Store.tracks[0].map((tracksItem, index) =>
                 <li key={tracksItem.id} onClick={this.handleClick.bind(this, tracksItem.id)}>
                     <StatePlayItem
-                        isSelect={this.state.selectTrack === tracksItem.id}
+                        isSelect={this.getPlayId() === tracksItem.id}
                         trackItem={tracksItem}
                     />
                 </li>

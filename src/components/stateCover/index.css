@@ -128,10 +128,9 @@
   }
   .controller{
     text-align: center;
-    bottom: 90px;
+    margin-top: 20px;
     font-size: 0;
     width: 100%;
-    position: absolute;
   }
   .controller-btn{
     cursor: pointer;
@@ -811,19 +810,22 @@
     z-index: 2;
     left: 50%;
     top: 50%;
-    margin: -90px 0 0 -44px;
+    margin: -125px 0 0 -44px;
     background-repeat: no-repeat;
   }
   .track-bar{
     font-size: 0;
     max-width: 70%;
-    margin: 0 auto;
+    margin: 0 auto 40px;
   }
   .track-bar-line{
     background-color: #ff5252;
     height: 2px;
     display: block;
+    width: 0;
     position: relative;
+    transition: width .05s;
+    transition-timing-function: linear;
   }
   .track-bar-value{
     color: rgba(254, 95, 89, 0.9);

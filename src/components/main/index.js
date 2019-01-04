@@ -14,7 +14,7 @@ class Main extends Component {
     };
 
     componentDidMount() {
-        fetch(`https://api.soundcloud.com/tracks?client_id=7172aa9d8184ed052cf6148b4d6b8ae6&limit=10&genres=rock&offset=663`)
+        fetch(`https://api.soundcloud.com/tracks?client_id=7172aa9d8184ed052cf6148b4d6b8ae6&limit=10&genres=drum&offset=663`)
             .then(response => response.json())
             .then(tracks => {
                 this.props.onAddTracks(tracks)
