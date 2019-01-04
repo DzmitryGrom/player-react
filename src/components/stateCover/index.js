@@ -11,6 +11,10 @@ class StateCover extends Component {
 
     getPlayId = () => this.props.__Store.selectTrack[0];
 
+    getCurTime = () => document.querySelector('#curTime');
+
+    getProgressBar = () => document.querySelector('#progressBar');
+
     getPlayer = () => document.querySelector('audio');
 
     getPositonTrack = () => {
@@ -34,13 +38,9 @@ class StateCover extends Component {
     };
 
     timeChange = () => {
-
-
-        let size = (this.getPlayer().currentTime * 100 / this.getPlayer().duration).toFixed(1) + "%";
-
-        const progressBar = document.querySelector('#progressBar');
-              
-        progressBar.style.width = size;
+        let time = new Date(this.getPlayer().currentTime * 1000);
+        this.getCurTime().innerHTML = `${(time.getUTCHours() ? time.toUTCString().slice(17, 25) : time.toUTCString().slice(20, 25))}`;  
+        this.getProgressBar().style.width = (this.getPlayer().currentTime * 100 / this.getPlayer().duration).toFixed(1) + "%";
     }
 
     nextPlayTrack = () => {

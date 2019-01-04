@@ -8,7 +8,7 @@ class StatePlayList extends Component {
         this.props.onSelectTrack(selectTrackId);
         setTimeout(function() {
             document.querySelector('audio').play();
-        }.bind(this),0)
+        },0)
     };
 
     getPlayId = () => this.props.__Store.selectTrack[0];
