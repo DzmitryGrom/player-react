@@ -4,7 +4,6 @@ import './index.css'
 
 import StateCover from '../stateCover'
 import StatePlayList from '../statePlayList'
-import bg from '../../interface/bg.jpg'
 import vinil from '../../interface/vinil.png'
 import tracksItems from '../../fixtures'
 
@@ -14,18 +13,18 @@ class Main extends Component {
     };
 
     componentDidMount() {
-        fetch(`https://api.soundcloud.com/tracks?client_id=7172aa9d8184ed052cf6148b4d6b8ae6&genres=drum&offset=663`)
+        fetch(`https://api.soundcloud.com/tracks?client_id=7172aa9d8184ed052cf6148b4d6b8ae6&genres=rap&offset=663`)
             .then(response => response.json())
             .then(tracks => {
                 this.props.onAddTracks(tracks)
             })
+
     }
 
     render() {
         const imageUrl = vinil;
         return (
             <div>
-                <div style={{ backgroundImage: `url(${bg})` }} className="background"/>
                 <StateCover isOpenList={this.state.isOpenList} info={imageUrl}/>
                 <StatePlayList
                     isOpenList={this.state.isOpenList}

@@ -1,4 +1,15 @@
-
+.background {
+  background-image:url('../../interface/bg.jpg');
+  position: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: -5%;
+  bottom: -5%;
+  left: -5%;
+  right: -5%;
+  -webkit-filter: blur(10px);
+}
   .i_arrow{
     background-image: url("../../interface/arrow.png");
     width: 14px;
@@ -33,12 +44,6 @@
     background-image: url("../../interface/search.png");
     width: 20px;
     height: 21px;
-  }
-  .i_scale{
-    background-image: url("../../interface/scale.png");
-    background-repeat: no-repeat;
-    width: 19px;
-    height: 22px;
   }
   .i_setting-red{
     vertical-align: middle;
@@ -655,48 +660,6 @@
   .playlist_panel-top-album{
     top: 311px;
   }
-
-  .playlist-item_top-panel{
-    border-top: 1px solid rgba(29, 39, 44, 0.5);
-    font-size: 0px;
-    text-align: center;
-    padding: 20px 20px;
-  }
-  .playlist-item_top-panel_artist{
-    text-align: left;
-  }
-  .playlist-item_albums-wrapper{
-  
-  }
-  .playlist-item_albums-elements{
-    display: inline-block;
-    vertical-align: top;
-  }
-  .playlist-item_albums-icon{
-    width: 106px;
-    background-size: 100%;
-    display: inline-block;
-    height: 106px;
-  }
-  .playlist-item_albums-text{
-    font-family: Roboto;
-    color: #ebebf8;
-    display: block;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 12.8px;
-    text-align: center;
-    text-shadow: 2px 4px 5px rgba(49, 49, 64, 0.75);
-  }
-  .playlist-item .pl-side_right .i_scale{
-    display: none;
-    position: relative;
-    top: 6px;
-    right: 17px;
-  }
-  .playlist-item-select .pl-side_right .i_scale{
-    display: inline-block;
-  }
   .playlist-scroll{
     position: absolute;
     top: 127px;
@@ -717,8 +680,6 @@
   .playlist-scroll-top-panel_pl{
     top: 5px;
   }
-  
-  
   .pl-side_right-top-panel{
     vertical-align: middle;
     display: inline-block;

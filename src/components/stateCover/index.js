@@ -66,7 +66,9 @@ class StateCover extends Component {
         }
 
         return(
-            <div className={isOpenList ? 'state state-cover state-cover-up' : 'state state-cover'}>
+            <div>
+                <div className="background"  style={{backgroundImage: selectObj[0] ? `url(${selectObj[0].user.avatar_url})` : null}}></div>
+                <div className={isOpenList ? 'state state-cover state-cover-up' : 'state state-cover'}>
                 <div className="panel panel_top">
                     <span className="panel-side-title"><i className="i i_arrow"/><span className="panel-side-tittle-text">Now Playing</span></span>
                 </div>
@@ -107,6 +109,7 @@ class StateCover extends Component {
                        </div>
                     ) : null }
                 </div>
+            </div>
             </div>
         )
     }

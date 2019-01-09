@@ -14,7 +14,11 @@ export const StatePlayItem = ({ isSelect, trackItem }) => {
                 <div className="pl-time-side_right">
                     <span className="pl-item-time">{time.getUTCHours() ? time.toUTCString().slice(17, 25) : time.toUTCString().slice(20, 25)}</span>
                 </div>
-                <div className="i i_scale"/>
+                <div className="i i_scale">
+                    <span className="i_scale-bar"></span>
+                    <span className="i_scale-bar"></span>
+                    <span className="i_scale-bar"></span>
+                </div>
             </div>
         </div>
     )
