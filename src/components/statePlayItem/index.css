@@ -1,4 +1,4 @@
-.i_scale{
+.i_scale {
     display: none;
     position: absolute;
     right: 15px;
@@ -13,9 +13,10 @@
     -ms-transform: rotate(180deg);
     -o-transition: rotate(180deg);
 }
+
 .i_scale-bar {
     background-color: #ff5252;
-    width:4px;
+    width: 4px;
     animation: equalize 4s 0s infinite;
     display: inline-block;
     vertical-align: bottom;
@@ -43,35 +44,42 @@
     -ms-animation-delay: -2.3s;
     -o-animation-delay: -2.3s;
 }
-.playlist-item{
+
+.playlist-item {
     border-bottom: 1px solid rgba(29, 39, 44, 0.5);
     font-size: 0px;
     padding: 10px 5% 19px 6%;
     cursor: pointer;
 }
-.playlist-item-select{
-    background-color:  rgba(29, 39, 44, 0.8);
+
+.playlist-item-select {
+    background-color: rgba(29, 39, 44, 0.8);
 }
-.playlist-item_top-panel{
+
+.playlist-item_top-panel {
     border-top: 1px solid rgba(29, 39, 44, 0.5);
     font-size: 0px;
     text-align: center;
     padding: 20px 20px;
-  }
-  .playlist-item_top-panel_artist{
+}
+
+.playlist-item_top-panel_artist {
     text-align: left;
-  }
-  .playlist-item_albums-elements{
+}
+
+.playlist-item_albums-elements {
     display: inline-block;
     vertical-align: top;
-  }
-  .playlist-item_albums-icon{
+}
+
+.playlist-item_albums-icon {
     width: 106px;
     background-size: 100%;
     display: inline-block;
     height: 106px;
-  }
-  .playlist-item_albums-text{
+}
+
+.playlist-item_albums-text {
     font-family: Roboto;
     color: #ebebf8;
     display: block;
@@ -80,16 +88,19 @@
     line-height: 12.8px;
     text-align: center;
     text-shadow: 2px 4px 5px rgba(49, 49, 64, 0.75);
-  }
-  .playlist-item-select .pl-side_right .i_scale{
+}
+
+.playlist-item-select .pl-side_right .i_scale {
     display: flex;
-  }
-.pl-side_left{
+}
+
+.pl-side_left {
     width: 81%;
     display: inline-block;
     vertical-align: middle;
-  }
-.pl-side_right{
+}
+
+.pl-side_right {
     display: inline-block;
     text-align: right;
     width: 19%;
@@ -97,20 +108,21 @@
     position: relative;
     z-index: 1;
 }
-.pl-text_top{
+
+.pl-text_top {
     display: block;
     font-family: Roboto;
-    color:  rgba(216, 217, 233, 0.9);
+    color: rgba(216, 217, 233, 0.9);
     font-weight: 300;
     font-size: 20px;
     margin: 0 auto 11px auto;
     padding: 0px;
     line-height: 1;
-  }
+}
 
-.pl-text_botton{
+.pl-text_botton {
     font-family: Roboto;
-    color:  rgba(235, 235, 250, 0.8);
+    color: rgba(235, 235, 250, 0.8);
     font-weight: 400;
     font-size: 13.3px;
     display: block;
@@ -126,78 +138,103 @@
     0% {
         height: 60%;
     }
+
     4% {
         height: 50%;
     }
+
     8% {
         height: 40%;
     }
+
     12% {
         height: 30%;
     }
+
     16% {
         height: 20%;
     }
+
     20% {
         height: 30%;
     }
+
     24% {
         height: 40%;
     }
+
     28% {
         height: 10%;
     }
+
     32% {
         height: 40%;
     }
+
     36% {
         height: 60%;
     }
+
     40% {
         height: 20%;
     }
+
     44% {
         height: 40%;
     }
+
     48% {
         height: 70%;
     }
+
     52% {
         height: 30%;
     }
+
     56% {
         height: 10%;
     }
+
     60% {
         height: 30%;
     }
+
     64% {
         height: 50%;
     }
+
     68% {
         height: 60%;
     }
+
     72% {
         height: 70%;
     }
+
     76% {
         height: 80%;
     }
+
     80% {
         height: 70%;
     }
+
     84% {
         height: 60%;
     }
+
     88% {
         height: 50%;
     }
+
     92% {
         height: 60%;
     }
+
     96% {
         height: 70%;
     }
+
     100% {
         height: 80%;
     }

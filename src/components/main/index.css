@@ -1,9 +1,10 @@
-.i{
+.i {
     display: inline-block;
     vertical-align: middle;
-    background-size: 100% 100%;
+    font-size: 35px;
 }
-.state{
+
+.state {
     overflow: hidden;
     width: 100%;
     height: 100%;

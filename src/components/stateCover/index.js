@@ -4,7 +4,8 @@ import './index.css'
 
 class StateCover extends Component {
     state = {
-        isPlay: true
+        isPlay: true,
+        isLoopTrack: false
     };
        
     getTracks = () => this.props.__Store.tracks[0];
@@ -37,6 +38,24 @@ class StateCover extends Component {
         }
     };
 
+    rewindTrack = (e) => {
+        this.getPlayer().currentTime = ((e.pageX - this.timeline.offsetLeft) / this.timeline.offsetWidth) * this.getPlayer().duration;
+    }
+
+    endedTrack = () => {
+        if (this.getPositonTrack() < this.getTracks().length - 1 && !this.state.isLoopTrack) {
+            this.nextPlayTrack();
+        }
+        if (this.state.isLoopTrack) {
+            this.getPlayer().play();
+        } else {
+            this.setState({ isPlay: false });
+            this.getPlayer().pause();
+            this.getPlayer().currentTime = 0;
+        }
+
+    }
+
     timeChange = () => {
         let time = new Date(this.getPlayer().currentTime * 1000);
         this.getCurTime().innerHTML = `${(time.getUTCHours() ? time.toUTCString().slice(17, 25) : time.toUTCString().slice(20, 25))}`;  
@@ -50,6 +69,10 @@ class StateCover extends Component {
         this.pausePlayTrack(curIndex);
     }
 
+    loopTrack = () => {
+        this.setState({ isLoopTrack: !this.state.isLoopTrack });
+    }
+
     prevPlayTrack = () => {
         let curIndex = this.getPositonTrack();
         --curIndex;
@@ -58,7 +81,7 @@ class StateCover extends Component {
     }
 
     render(){
-        const { info, isOpenList } = this.props;
+        const { isOpenList } = this.props;
         let selectObj = {};
 
         if(this.getTracks()){
@@ -73,12 +96,12 @@ class StateCover extends Component {
                     <span className="panel-side-title"><i className="i i_arrow"/><span className="panel-side-tittle-text">Now Playing</span></span>
                 </div>
                 <div className="track">
-                <div className="track-cover" style={{maxWidth: '70%', backgroundImage: `url(${info})`}}/>
+                <div className="track-cover"/>
                     {selectObj[0] ? (
                         <div>
                             <div className="track-cover-author" style={{ backgroundImage: `url(${selectObj[0].user.avatar_url})` }}/>
-                            <audio onTimeUpdate={this.timeChange} style={{display: 'none'}} src={`https://api.soundcloud.com/tracks/${this.getPlayId()}/stream?client_id=7172aa9d8184ed052cf6148b4d6b8ae6`} controls/>
-                            <div id="defaultBar" className="track-bar" >
+                            <audio  onEnded={ this.endedTrack }  onTimeUpdate={this.timeChange} style={{display: 'none'}} src={`https://api.soundcloud.com/tracks/${this.getPlayId()}/stream?client_id=7172aa9d8184ed052cf6148b4d6b8ae6`} controls/>
+                            <div id="defaultBar" className="track-bar" onClick={this.rewindTrack}  ref={(timeline) => { this.timeline = timeline }}>
                                 <span  id="progressBar" className="track-bar-line">
                                     <span id="curTime" className="track-bar-value">00:00</span>
                                 </span>
@@ -92,19 +115,19 @@ class StateCover extends Component {
                                 {/*<i className="i i_shufle"/>*/}
                                 {/*</a>*/}
                                 <div className="controller-btn">
-                                {this.getPositonTrack() >= 1 ? ( <div onClick={this.prevPlayTrack}><i className="i i_prev"/></div> ) : null}
+                                <i className={this.getPositonTrack() >= 1 ? "i icon-backward" : "i icon-backward disabled"} onClick={this.getPositonTrack() >= 1 ? this.prevPlayTrack : null} />    
                                 </div>
                               
                                 <div className="controller-btn" onClick={this.pausePlayTrack}>
-                                    {this.state.isPlay ? ( <i className="i i_pause"/>) : ( <i className="i i_play"/>)}
+                                    <i className={this.state.isPlay ? "i icon-pause" : "i icon-play"} />
                                 </div> 
                                 
                                 <div className="controller-btn">
-                                    {(this.getPositonTrack() + 1) < this.getTracks().length ? ( <div onClick={this.nextPlayTrack}><i className="i i_next"/></div> ) : null}
+                                    <i className={(this.getPositonTrack() + 1) < this.getTracks().length ? "i icon-forward" : "i icon-forward disabled"} onClick={(this.getPositonTrack() + 1) < this.getTracks().length ? this.nextPlayTrack : null} />
                                 </div>
-                                {/*<a className="controller-btn" href="#">*/}
-                                {/*<i className="i i_repeat"/>*/}
-                                {/*</a>*/}
+                                <div className="controller-btn">
+                                    <i className={this.state.isLoopTrack ? "i icon-loop icon-loop-active" : "i icon-loop"} onClick={this.loopTrack}/>
+                                </div>
                             </div>
                        </div>
                     ) : null }
