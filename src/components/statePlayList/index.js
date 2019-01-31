@@ -1,53 +1,37 @@
-import React, { Component } from 'react'
-import { StatePlayItem } from '../statePlayItem'
-import { connect } from 'react-redux';
+import React from 'react'
+import StatePlayItem from '../statePlayItem'
+import Player from '../../playerControl'
+
 import './index.css'
 
-class StatePlayList extends Component {
-    handleClick = selectTrackId => {
-        this.props.onSelectTrack(selectTrackId);
-        setTimeout(function() {
-            document.querySelector('audio').play();
-        },0)
+const StatePlayList = props => {
+    const { onButtonClick, isOpenList, tracks, setTrack, playTrack } = props;
+
+    function handleClick(track) {
+        Player.getPositonSelectTrack(track, tracks);
+        setTrack(track);
+        Player.select(track.id);
+       
     };
 
-    getPlayId = () => this.props.__Store.selectTrack[0];
+    return ( 
 
-    render(){
-        const { onButtonClick, isOpenList } = this.props;
-       
-        if (this.props.__Store.tracks.length > 0) {
-            const statePlayItem = this.props.__Store.tracks[0].map((tracksItem, index) =>
-                <li key={tracksItem.id} onClick={this.handleClick.bind(this, tracksItem.id)}>
-                    <StatePlayItem
-                        isSelect={this.getPlayId() === tracksItem.id}
-                        trackItem={tracksItem}
-                    />
-                </li>
-            );
-            return (
-                <div className={isOpenList ? 'state state-playlist state-playlist-active' : 'state state-playlist'}>
-                    <div className="panel panel_top panel_bg" onClick={onButtonClick}>
-                        <span className="top-panel-text">Playlist</span>
-                    </div>
-                    <ul className="playlist">
-                        {statePlayItem}
-                    </ul>
-                </div>
-            )
-        }
-        return null
-    }
-   
+        <div className={isOpenList ? 'state state-playlist state-playlist-active' : 'state state-playlist'}>
+            <div className="panel panel_top panel_bg" onClick={onButtonClick}>
+                <span className="top-panel-text">Playlist</span>
+            </div>
+            <ul className="playlist">
+                {tracks.isReady ? tracks.items.map((tracksItem, index) =>(
+                    <li key={index} onClick={handleClick.bind(this, tracksItem)}>
+                        <StatePlayItem
+                            {...tracksItem}
+                            isSelect={playTrack.id === tracksItem.id}
+                        />
+                    </li>)) : 'LOAD'
+                }
+            </ul>
+        </div>
+    )
 }
 
-export default connect(
-    state => ({
-        __Store: state
-    }),
-    dispatch => ({
-        onSelectTrack: (trackId) => {
-            dispatch({ type: 'PLAY_TRACK_ID', payload: trackId })
-        }
-    })
-)(StatePlayList);
+export default StatePlayList;

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
 import  tracks from './tracks';
-import  selectTrack from './selectTrack';
+import  playTrack from './playTrack';
 
 export default combineReducers({
     tracks,
-    selectTrack
+    playTrack
 })

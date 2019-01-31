@@ -1,14 +1,16 @@
 import React from 'react'
 import './index.css'
 
-export const StatePlayItem = ({ isSelect, trackItem }) => {
+const StatePlayItem = props => {
+    const { user, duration, title, isSelect } = props;
     const time = new Date();
-    time.setTime(trackItem.duration);
+    time.setTime(duration);
+
     return (
         <div className={isSelect ? 'playlist-item playlist-item-select' : 'playlist-item'}>
             <div className="pl-side_left">
-                <span className="pl-text_top">{trackItem.user.username}</span>
-                <span className="pl-text_botton">{trackItem.title}</span>
+                <span className="pl-text_top">{user.username}</span>
+                <span className="pl-text_botton">{title}</span>
             </div>
             <div className="pl-side_right">
                 <div className="pl-time-side_right">
@@ -23,3 +25,5 @@ export const StatePlayItem = ({ isSelect, trackItem }) => {
         </div>
     )
 }
+
+export default StatePlayItem;

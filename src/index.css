@@ -1,11 +1,13 @@
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-body{
+
+body {
   background: black;
   position: relative;
 }
@@ -13,8 +15,8 @@ body{
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('icomoon/fonts/icomoon.eot?feh91t');
-  src:  url('icomoon/fonts/icomoon.eot?feh91t#iefix') format('embedded-opentype'),
+  src: url('icomoon/fonts/icomoon.eot?feh91t');
+  src: url('icomoon/fonts/icomoon.eot?feh91t#iefix') format('embedded-opentype'),
     url('icomoon/fonts/icomoon.ttf?feh91t') format('truetype'),
     url('icomoon/fonts/icomoon.woff?feh91t') format('woff'),
     url('icomoon/fonts/icomoon.svg?feh91t#icomoon') format('svg');
@@ -22,7 +24,8 @@ body{
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -37,33 +40,55 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 35px;
+}
+
+.state {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .icon-list:before {
   content: "\e905";
 }
+
 .icon-equalizer:before {
   content: "\e904";
 }
+
 .icon-pause:before {
   content: "\e900";
 }
+
 .icon-play:before {
   content: "\e901";
 }
+
 .icon-backward:before {
   content: "\ea1f";
 }
+
 .icon-forward:before {
   content: "\ea20";
 }
+
 .icon-loop:before {
   content: "\ea2d";
 }
+
 .icon-shuffle:before {
   content: "\ea30";
 }
+
 .icon-arrow-down-right:before {
   content: "\e902";
 }
+
 .icon-arrow-left:before {
   content: "\e903";
 }
