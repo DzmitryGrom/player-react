@@ -1,0 +1,7 @@
+.state-playlist-top {
+    transform: translateY(-100%);
+}
+  
+.state-playlist-top-active {
+    transform: translateY(0%);
+}

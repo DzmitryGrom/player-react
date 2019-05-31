@@ -57,13 +57,15 @@ class StateCover extends PureComponent {
     }
  
     render() {
-        const { isOpenList, playTrack } = this.props;
+        const { isOpenListBottom, isOpenListTop, playTrack } = this.props;
         return (
             <div className={(!playTrack.id ? ' disabled' : null)}>
                 <div className="background" style={{ backgroundImage: playTrack.id ? `url(${playTrack.user.avatar_url})` : null }} />
-                <div className={isOpenList ? 'state state-cover state-cover-up' : 'state state-cover'}>
+                <div className={"state state-cover" + (isOpenListBottom ? ' state-cover-up' : '') + (isOpenListTop ? ' state-cover-down' : '')}>
                     <div className="panel panel_top">
-                        <span className="panel-side-title"><i className="i i_arrow" /><span className="panel-side-tittle-text">Now Playing {playTrack.id ? <span className="panel-side-tittle-genre">{playTrack.genre}</span> : null}</span></span>
+                        <span className="panel-side-title">
+                            <i className="i i_arrow" /><span className="panel-side-tittle-text">Now Playing {playTrack.id ? <span className="panel-side-tittle-genre">{playTrack.genre}</span> : null}</span>
+                        </span>
                     </div>
                     <div className="track-cover">
                         {playTrack.id ?  <div className="track-cover-author" style={{backgroundImage: `url(${playTrack.user.avatar_url})`}}/> : null}

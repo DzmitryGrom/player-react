@@ -1,10 +1,12 @@
+import { SET_TRACKS, SET_TRACK } from '../../../core/store/constans';
+
 export const setTracks = objs => ({
-    type: 'TRACKS',
+    type: SET_TRACKS,
     payload: objs
 }); 
 
 export const setTrack = obj => ({
-    type: 'PLAY_TRACK',
+    type: SET_TRACK,
     payload: obj
 }); 
 

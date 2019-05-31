@@ -46,10 +46,26 @@
 }
 
 .i_settings {
-  background-image: url("../../interface/ellipse.png");
   background-repeat: no-repeat;
   width: 4px;
   height: 24px;
+  background-size: 4px 24px;
+  position: relative;
+  padding: 0px 10px 0px 10px;
+
+}
+
+.i_settings:before {
+  content: '...';
+  width: 4px;
+  height: 24px;
+  position: absolute;
+  left: 30px;
+  top: -12px;
+  right: 0;
+  display: block;
+  color: inherit;
+  transform: rotate(90deg);
 }
 
 .i_search {
@@ -58,13 +74,6 @@
   height: 21px;
 }
 
-.i_setting-red {
-  vertical-align: middle;
-  background-image: url("../../interface/ellipse-litle.png");
-  background-repeat: no-repeat;
-  width: 2px;
-  height: 15px;
-}
 
 .i_sound {
   background-image: url("../../interface/sound.png");
@@ -122,16 +131,25 @@
 .icon-pause,
 .icon-backward,
 .icon-loop,
+.i_settings,
 .icon-forward {
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
   color: #c95561;
   transition: .3s;
+  cursor: pointer;
+}
+
+.icon-play,
+.icon-pause,
+.icon-backward,
+.icon-loop,
+.icon-forward {
+  width: 35px;
+  height: 35px;
 }
 
 
 .icon-play:hover,
+.i_settings:hover,
 .icon-loop:hover,
 .icon-backward:hover,
 .icon-forward:hover {
@@ -216,50 +234,33 @@
 
 .state-albums {
   transform: translateX(-100%);
-  transition: transform .6s;
 }
 
 .state-artists {
   transform: translateX(-100%);
-  transition: transform .6s;
 }
 
 .state-cover {
   transform: translateY(0%);
-  transition: transform .6s;
 }
 
 .state-cover-up {
   transform: translateY(-100%);
-  transition: transform .6s;
 }
 
 .state-cover-down {
   transform: translateY(100%);
-  transition: transform .6s;
 }
 
 .state-cover-degradation {
   transform: translateY(-100%);
 }
 
-.state-creation {
-  transform: translateY(-100%);
-  transition: transform .6s;
-}
-
-.state-creation-active {
-  transform: translateY(0%);
-  transition: transform .6s;
-}
-
 .state-equalizer {
-  transition: transform .6s;
   transform: translateX(-100%);
 }
 
 .state-equalizer-active {
-  transition: transform .6s;
   transform: translateX(0%);
 }
 
@@ -517,14 +518,6 @@
 
 .power-text_bass {
   right: 10%;
-}
-
-.panel-side-settings {
-  position: absolute;
-  top: 20px;
-  right: 3%;
-  display: inline-block;
-  padding: 0px 10px 0px 10px;
 }
 
 .panel-side-settings_nav {
@@ -1150,14 +1143,12 @@
 @media only screen and (max-width: 500px) {
   .playlist_artist-album_foto {
     margin: 0 auto;
-    transition: transform .6s;
   }
 }
 
 @media only screen and (max-width: 335px) {
   .playlist_panel-album-reload {
     left: 83%;
-    transition: transform .6s;
   }
 }
 

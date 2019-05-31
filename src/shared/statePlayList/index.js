@@ -1,11 +1,12 @@
 import React from 'react'
-import StatePlayItem from '../statePlayItem'
+import StatePlayItem from '../statePlayItem/index'
 import Player from '../../playerControl'
 
 import './index.css'
+import '../../commonStyle.css'
 
-const StatePlayList = props => {
-    const { onButtonClick, isOpenList, tracks, setTrack, playTrack } = props;
+const StatePlayListBottom = props => {
+    const { onToggleListBottom, isOpenListBottom, isOpenListTop, tracks, setTrack, playTrack } = props;
 
     function handleClick(track) {
         Player.getPositonSelectTrack(track, tracks);
@@ -15,9 +16,8 @@ const StatePlayList = props => {
     };
 
     return ( 
-
-        <div className={isOpenList ? 'state state-playlist state-playlist-active' : 'state state-playlist'}>
-            <div className="panel panel_top panel_bg" onClick={onButtonClick}>
+        <div className={"state state-playlist-bottom" + (isOpenListBottom ? ' state-playlist-bottom-active' : '') + (isOpenListTop ? ' state-playlist-bottom-disactive' : '')}>
+            <div className="panel panel_top panel_bg" onClick={onToggleListBottom}>
                 <span className="top-panel-text">Playlist</span>
             </div>
             <ul className="playlist">
@@ -34,4 +34,4 @@ const StatePlayList = props => {
     )
 }
 
-export default StatePlayList;
+export default StatePlayListBottom;
