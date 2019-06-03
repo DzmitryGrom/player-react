@@ -1,5 +1,5 @@
 import React from 'react'
-import StatePlayItem from '../../shared/statePlayItem'
+import StatePlayItem from '../../shared/track-Item/component'
 import Player from '../../playerControl'
 
 import './index.css'

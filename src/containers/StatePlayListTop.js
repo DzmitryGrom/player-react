@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'; 
 import { bindActionCreators } from 'redux'
 import statePlayListTop from '../components/statePlayListTop'
-import * as Action from '../features/common/actions/actions'
+import * as Action from '../features/common/actions/index'
 
 const mapStateToProps = id => ({
     ...id

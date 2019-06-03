@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
 import { bindActionCreators } from 'redux'
-import * as Action from '../common/actions/actions'
+import * as Action from '../common/actions/index'
 import AppComponent from './component'
 import { getTracks } from '../common/utils';
 

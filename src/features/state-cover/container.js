@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import Player from '../../playerControl';
 import { bindActionCreators } from 'redux';
 import StateCoverComponent from './component';
-import * as Action from '../common/actions/actions'
+import * as Action from '../common/actions/index'
 
 
 class StateCoverContainer extends PureComponent {
@@ -60,8 +60,8 @@ class StateCoverContainer extends PureComponent {
   // rewind track
   rewindTrack = (e) => {
     const { timeline } = this;
-    Player.trackRewind(timeline, e);
-  }
+    Player.trackRewind(timeline.current, e);
+  };
 
   render() {
     const { isOpenListBottom, isOpenListTop, playTrack } = this.props;

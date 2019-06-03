@@ -31,7 +31,6 @@ class Player {
     }
 
     trackRewind(timeline, e) {
-        console.log(e);
         this.stream.currentTime = ((e.pageX - timeline.offsetLeft) / timeline.offsetWidth) *  this.stream.duration;
     }
     

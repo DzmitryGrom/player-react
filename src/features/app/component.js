@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-import StateCover from '../stateCover'
-import StatePlayListBottom from '../../containers/StatePlayListBottom'
+import StateCover from '../state-cover'
+import StateBottom from '../../features/state-bottom'
 import StatePlayListTop from '../../containers/StatePlayListTop'
 
 const AppComponent = ({onButtonClick, isOpenListBottom, isOpenListTop, onToggleListBottom}) => {
@@ -16,9 +16,8 @@ const AppComponent = ({onButtonClick, isOpenListBottom, isOpenListTop, onToggleL
       <StatePlayListTop
         isOpenListTop={isOpenListTop}
       />
-      <StatePlayListBottom
+      <StateBottom
         isOpenListBottom={isOpenListBottom}
-        isOpenListTop={isOpenListTop}
         onToggleListBottom={onToggleListBottom}
       />
       </>
